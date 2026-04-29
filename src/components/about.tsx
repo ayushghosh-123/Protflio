@@ -4,23 +4,7 @@ import { motion } from "framer-motion";
 import { Briefcase, CheckCircle, Users } from "lucide-react";
 
 export default function About() {
-  const stats = [
-    {
-      label: "Years Experience",
-      value: "10+",
-      icon: <Briefcase className="text-[#FF5722]" size={24} />,
-    },
-    {
-      label: "Completed Projects",
-      value: "64+",
-      icon: <CheckCircle className="text-[#FF5722]" size={24} />,
-    },
-    {
-      label: "Happy Clients",
-      value: "151+",
-      icon: <Users className="text-[#FF5722]" size={24} />,
-    },
-  ];
+  
 
   return (
     <section id="about" className="py-24 bg-black text-white overflow-hidden">
@@ -38,27 +22,24 @@ export default function About() {
               Hello
             </span>
             <h2 className="text-5xl md:text-6xl font-black uppercase mb-8 leading-tight">
-              I’m <span className="text-transparent" style={{ WebkitTextStroke: '1px white' }}>Alex Dev</span>
+              I’m <span className="text-transparent" style={{ WebkitTextStroke: '1px white' }}>Ayush Ghosh</span>
             </h2>
             
             <p className="text-gray-400 text-lg md:text-xl leading-relaxed mb-10 max-w-xl">
-              I am a UI/UX Designer and Full Stack Developer based in San Francisco. 
-              I have a passion for creating clean, functional, and user-centered digital 
-              experiences. With over a decade of experience, I specialize in solving 
-              complex problems through elegant design and robust code.
+              Full Stack Developer with strong expertise in MERN stack and modern web technologies. Experienced in building scalable, user-centric applications and integrating AI-driven solutions using LangChain and LangGraph. Passionate about performance optimization, clean architecture, and intelligent automation.
             </p>
-
-            {/* Stats Grid */}
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 pt-8 border-t border-white/10">
-              {stats.map((stat, index) => (
-                <div key={index} className="flex flex-col gap-2">
-                  <div className="mb-2">{stat.icon}</div>
-                  <span className="text-3xl font-black">{stat.value}</span>
-                  <span className="text-[10px] uppercase tracking-widest text-gray-500 font-bold">
-                    {stat.label}
-                  </span>
-                </div>
-              ))}
+            {/* GitHub Contributions Section */}
+            <div className="mt-12 pt-8 border-t border-white/10">
+              <h3 className="text-sm font-black uppercase tracking-[0.2em] text-[#FF5722] mb-6">
+                Code Activity
+              </h3>
+              <div className="bg-white/5 p-6 rounded-lg border border-white/5 overflow-hidden flex justify-center">
+                <img 
+                  src="https://ghchart.rshah.org/FF5722/ayushghosh-123" 
+                  alt="Ayush Ghosh's Github Contributions" 
+                  className="w-full max-w-3xl opacity-90 hover:opacity-100 transition-opacity duration-300 drop-shadow-md"
+                />
+              </div>
             </div>
           </motion.div>
 

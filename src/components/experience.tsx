@@ -4,23 +4,12 @@ import { motion } from "framer-motion";
 
 const experiences = [
   {
-    year: "2022 - Present",
-    company: "Tech Solutions Inc.",
-    role: "Senior UI/UX Designer",
-    description: "Leading the design team in creating high-end enterprise applications and design systems.",
-  },
-  {
-    year: "2019 - 2022",
-    company: "Digital Agency Co.",
-    role: "Full Stack Developer",
-    description: "Built scalable web applications using the MERN stack for global clients.",
-  },
-  {
-    year: "2015 - 2019",
-    company: "Freelance",
-    role: "UI Designer & Developer",
-    description: "Worked with startups to define their visual identity and build their first digital products.",
-  },
+    year: "Sep, 2024 - Nov, 2024",
+    company: "EmployeeLife",
+    role: "Training Learner",
+    description: "fixing security holes , and making endpoint work better.Used the best security practice to make sure that data integrity and authentication and authentication weren all in place .Develope system-level and command-line skill by Linux for scripting server configuration and security testing ",
+    image: "https://picsum.photos/seed/employeelife/800/400"
+  }
 ];
 
 export default function Experience() {
@@ -53,20 +42,31 @@ export default function Experience() {
                 }`}
               >
                 {/* Content */}
-                <div className="w-full md:w-1/2 px-0 md:px-12">
-                  <div className={`p-8 bg-white/5 border border-white/5 hover:border-[#FF5722]/30 transition-colors ${
-                    index % 2 === 0 ? "text-left md:text-right" : "text-left"
+                <div className="w-full md:w-1/2 px-0 md:px-12 flex justify-center">
+                  <div className={`p-6 md:p-8 bg-white/5 border border-white/5 hover:border-[#FF5722]/30 transition-colors flex flex-col lg:flex-row gap-6 items-center w-full ${
+                    index % 2 === 0 ? "text-left md:text-right lg:flex-row-reverse" : "text-left"
                   }`}>
-                    <span className="text-[#FF5722] font-black text-sm uppercase tracking-widest mb-2 block">
-                      {exp.year}
-                    </span>
-                    <h3 className="text-2xl font-black uppercase mb-1">{exp.company}</h3>
-                    <p className="text-white/60 font-bold uppercase text-xs tracking-widest mb-4">
-                      {exp.role}
-                    </p>
-                    <p className="text-gray-400 leading-relaxed">
-                      {exp.description}
-                    </p>
+                    <div className="flex-1">
+                      <span className="text-[#FF5722] font-black text-sm uppercase tracking-widest mb-2 block">
+                        {exp.year}
+                      </span>
+                      <h3 className="text-2xl font-black uppercase mb-1">{exp.company}</h3>
+                      <p className="text-white/60 font-bold uppercase text-xs tracking-widest mb-4">
+                        {exp.role}
+                      </p>
+                      <p className="text-gray-400 leading-relaxed text-sm md:text-base">
+                        {exp.description}
+                      </p>
+                    </div>
+                    {exp.image && (
+                      <div className="w-full lg:w-40 xl:w-48 shrink-0">
+                        <img
+                          src={exp.image}
+                          alt={`${exp.company} ${exp.role}`}
+                          className="w-full h-auto aspect-[4/3] object-cover rounded-lg border border-white/5 hover:border-[#FF5722]/30 transition-transform duration-700 hover:scale-105"
+                        />
+                      </div>
+                    )}
                   </div>
                 </div>
 

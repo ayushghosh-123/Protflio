@@ -11,13 +11,13 @@ export default function Hero() {
           className="text-[15vw] leading-none font-black uppercase text-transparent"
           style={{ WebkitTextStroke: '1px rgba(255,255,255,0.3)' }}
         >
-          Creative
+          Developer
         </h2>
         <h2 
           className="text-[15vw] leading-none font-black uppercase text-transparent"
           style={{ WebkitTextStroke: '1px rgba(255,255,255,0.3)' }}
         >
-          Designer
+          Software Engineer
         </h2>
       </div>
 
@@ -39,12 +39,12 @@ export default function Hero() {
             transition={{ duration: 0.8 }}
           >
             <h1 className="text-6xl md:text-8xl lg:text-9xl font-black uppercase leading-none text-white flex flex-col">
-              <span className="block">I&apos;m a UI/UX</span>
+              <span className="block">I&apos;m an Agentic AI </span>
               <span 
                 className="block text-transparent"
                 style={{ WebkitTextStroke: '2px white' }}
               >
-                Designer
+              & Fullstack Developer
               </span>
             </h1>
           </motion.div>

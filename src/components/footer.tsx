@@ -28,9 +28,9 @@ export default function Footer() {
           <p className="text-[10px] uppercase tracking-[0.4em] text-gray-600 font-black">
             © {new Date().getFullYear()} ALEX DEV — ALL RIGHTS RESERVED
           </p>
-          <div className="flex gap-8">
+          {/* <div className="flex gap-8">
             <span className="text-[10px] uppercase tracking-[0.4em] text-gray-700 font-black">Local Time: {new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}</span>
-          </div>
+          </div> */}
         </div>
       </div>
     </footer>
