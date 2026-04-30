@@ -1,27 +1,26 @@
 "use client";
 
+import React from "react";
 import { motion } from "framer-motion";
 import { ExternalLink } from "lucide-react";
 import { FaGithub } from "react-icons/fa6";
-// import { 
-//   SiReact, SiNextdotjs, SiTypescript, SiTailwindcss, 
-//   SiNodedotjs, SiMongodb, SiPostgresql, SiOpenai, SiStripe,
-//   SiRecharts
-// } from "react-icons/si";
+import { 
+  SiReact, SiNextdotjs, SiTypescript, SiTailwindcss, 
+  SiNodedotjs, SiMongodb, SiPostgresql, SiOpenai, SiStripe,
+} from "react-icons/si";
 import Link from "next/link";
 
-// const techIcons: Record<string, JSX.Element> = {
-//   "React": <SiReact />,
-//   "Next.js": <SiNextdotjs />,
-//   "TypeScript": <SiTypescript />,
-//   "Tailwind CSS": <SiTailwindcss />,
-//   "Node.js": <SiNodedotjs />,
-//   "MongoDB": <SiMongodb />,
-//   "PostgreSQL": <SiPostgresql />,
-//   "OpenAI": <SiOpenai />,
-//   "Stripe": <SiStripe />,
-//   "Recharts": <SiRecharts />,
-// };
+const techIcons: Record<string, React.JSX.Element> = {
+  "React": <SiReact />,
+  "Next.js": <SiNextdotjs />,
+  "TypeScript": <SiTypescript />,
+  "Tailwind CSS": <SiTailwindcss />,
+  "Node.js": <SiNodedotjs />,
+  "MongoDB": <SiMongodb />,
+  "PostgreSQL": <SiPostgresql />,
+  "OpenAI": <SiOpenai />,
+  "Stripe": <SiStripe />
+};
 
 const projects = [
   {
@@ -107,7 +106,7 @@ export default function Projects() {
                       className="flex items-center gap-2 px-3 py-1 bg-white/5 text-gray-300 text-[10px] font-black uppercase tracking-widest rounded-full border border-white/10 group-hover:border-[#FF5722]/20 transition-colors"
                     >
                       <span className="text-[#FF5722]">
-                        {/* {techIcons[t]} */}
+                        {techIcons[t]}
                       </span>
                       {t}
                     </span>

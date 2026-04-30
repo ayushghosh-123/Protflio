@@ -1,15 +1,16 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { FaGithub, FaLinkedin, FaInstagram, FaXTwitter ,  } from "react-icons/fa6";
+import { FaGithub, FaLinkedin, FaXTwitter } from "react-icons/fa6";
+import { SiGmail } from "react-icons/si";
 import { ArrowUpRight } from "lucide-react";
 
 export default function Contact() {
   const socials = [
-    { name: "GitHub", icon: <FaGithub size={20} />, href: "#" },
-    { name: "LinkedIn", icon: <FaLinkedin size={20} />, href: "#" },
-    { name: "Twitter", icon: <FaXTwitter size={20} />, href: "#" },
-    { name: "Instagram", icon: <FaInstagram size={20} />, href: "#" },
+    { name: "GitHub", icon: <FaGithub size={20} />, href: "https://github.com/ayushghosh-123" },
+    { name: "LinkedIn", icon: <FaLinkedin size={20} />, href: "https://www.linkedin.com/in/ayush-ghosh-9659772b0/" },
+    { name: "Twitter", icon: <FaXTwitter size={20} />, href: "https://x.com/AyushGhosh30804" },
+    { name: "Email", icon: <SiGmail size={20} />, href: "mailto:ghosyayush910@gmail.com" }
   ];
 
   return (

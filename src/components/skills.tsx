@@ -2,51 +2,71 @@
 
 import { motion } from "framer-motion";
 import { Terminal, Database, Code2, Cpu } from "lucide-react";
-import { FaRobot, FaBrain, FaNetworkWired, FaMemory } from "react-icons/fa";
+import { 
+  FaReact, 
+  FaNodeJs, 
+  FaGitAlt, 
+  FaDocker, 
+  FaBrain, 
+  FaNetworkWired, 
+  FaMemory } from "react-icons/fa";
+import { 
+  SiNextdotjs, 
+  SiTypescript, 
+  SiTailwindcss, 
+  SiFramer, 
+  SiExpress, 
+  SiPostgresql, 
+  SiMongodb, 
+  SiGraphql, 
+  SiVercel, 
+  SiLangchain, 
+  SiOllama, 
+  SiOpenai 
+} from "react-icons/si";
 
 const skillCategories = [
   {
     title: "Frontend",
     icon: <Terminal className="text-[#FF5722]" size={32} />,
     skills: [
-      { name: "React", icon: '' },
-      { name: "Next.js", icon: '' },
-      { name: "TypeScript", icon: '' },
-      { name: "Tailwind CSS", icon: '<SiTailwindcss />' },
-      { name: "Framer Motion", icon: '<SiFramer /> '},
-    ],
+      { name: "React", icon: <FaReact className="text-[#61DAFB]" /> },
+      { name: "Next.js", icon: <SiNextdotjs /> },
+      { name: "TypeScript", icon: <SiTypescript className="text-[#3178C6]" /> },
+      { name: "Tailwind CSS", icon: <SiTailwindcss className="text-[#06B6D4]" /> },
+      { name: "Framer Motion", icon: <SiFramer /> },
+    ]
   },
   {
     title: "Backend",
     icon: <Database className="text-[#FF5722]" size={32} />,
     skills: [
-      { name: "Node.js", icon: '<SiNodedotjs />' },
-      { name: "Express", icon:'' },
-      { name: "PostgreSQL", icon: '<SiPostgresql />' },
-      { name: "MongoDB", icon: '<SiMongodb /> '},
-      { name: "GraphQL", icon: '<SiGraphql />' },
+      { name: "Node.js", icon: <FaNodeJs className="text-[#339933]" /> },
+      { name: "Express", icon: <SiExpress /> },
+      { name: "PostgreSQL", icon: <SiPostgresql className="text-[#4169E1]" /> },
+      { name: "MongoDB", icon: <SiMongodb className="text-[#47A248]" /> },
+      { name: "GraphQL", icon: <SiGraphql className="text-[#E10098]" /> },
     ],
   },
   {
     title: "DevOps",
     icon: <Code2 className="text-[#FF5722]" size={32} />,
     skills: [
-      { name: "Git", icon: '<SiGit />' },
-      { name: "Docker", icon: '<SiDocker />' },
-      { name: "Vercel", icon: '<SiVercel />' },
-      
+      { name: "Git", icon: <FaGitAlt className="text-[#F05032]" /> },
+      { name: "Docker", icon: <FaDocker className="text-[#2496ED]" /> },
+      { name: "Vercel", icon: <SiVercel /> },
     ],
   },
   {
     title: "Agentic AI",
     icon: <Cpu className="text-[#FF5722]" size={32} />,
     skills: [
-      { name: "Langchain", icon: '<SiLangchain /> '},
-      { name: "Langgraph", icon: '<FaNetworkWired />' },
-      { name: "Memory0", icon: '<FaMemory /> '},
-      { name: "Ollama", icon: '<SiOllama />' },
-      { name: "RAG", icon: '<FaBrain />' },
-      { name: "Openai SDK", icon:' <SiOpenai />' },
+      { name: "Langchain", icon: <SiLangchain /> },
+      { name: "Langgraph", icon: <FaNetworkWired /> },
+      { name: "Memory0", icon: <FaMemory /> },
+      { name: "Ollama", icon: <SiOllama /> },
+      { name: "RAG", icon: <FaBrain /> },
+      { name: "Openai SDK", icon: <SiOpenai /> },
     ],
   }
 ];
@@ -100,3 +120,4 @@ export default function Skills() {
     </section>
   );
 }
+
