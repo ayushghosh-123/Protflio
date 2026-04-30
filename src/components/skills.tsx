@@ -1,29 +1,54 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Code2, Database, Layout, Terminal } from "lucide-react";
+import { Terminal, Database, Code2, Cpu } from "lucide-react";
+import { FaRobot, FaBrain, FaNetworkWired, FaMemory } from "react-icons/fa";
 
 const skillCategories = [
   {
-    title: "UI/UX Design",
-    icon: <Layout className="text-[#FF5722]" size={32} />,
-    skills: ["Figma", "Adobe XD", "Prototyping", "User Research", "Wireframing"],
-  },
-  {
     title: "Frontend",
     icon: <Terminal className="text-[#FF5722]" size={32} />,
-    skills: ["React", "Next.js", "TypeScript", "Tailwind CSS", "Framer Motion"],
+    skills: [
+      { name: "React", icon: '' },
+      { name: "Next.js", icon: '' },
+      { name: "TypeScript", icon: '' },
+      { name: "Tailwind CSS", icon: '<SiTailwindcss />' },
+      { name: "Framer Motion", icon: '<SiFramer /> '},
+    ],
   },
   {
     title: "Backend",
     icon: <Database className="text-[#FF5722]" size={32} />,
-    skills: ["Node.js", "Express", "PostgreSQL", "MongoDB", "GraphQL"],
+    skills: [
+      { name: "Node.js", icon: '<SiNodedotjs />' },
+      { name: "Express", icon:'' },
+      { name: "PostgreSQL", icon: '<SiPostgresql />' },
+      { name: "MongoDB", icon: '<SiMongodb /> '},
+      { name: "GraphQL", icon: '<SiGraphql />' },
+    ],
   },
   {
     title: "DevOps",
     icon: <Code2 className="text-[#FF5722]" size={32} />,
-    skills: ["Git", "Docker", "AWS", "Vercel", "CI/CD"],
+    skills: [
+      { name: "Git", icon: '<SiGit />' },
+      { name: "Docker", icon: '<SiDocker />' },
+      { name: "Vercel", icon: '<SiVercel />' },
+      
+    ],
   },
+  {
+    title: "Agentic AI",
+    icon: <Cpu className="text-[#FF5722]" size={32} />,
+    skills: [
+      { name: "Langchain", icon: '<SiLangchain /> '},
+      { name: "Langgraph", icon: '<FaNetworkWired />' },
+      { name: "Memory0", icon: '<FaMemory /> '},
+      { name: "Ollama", icon: '<SiOllama />' },
+      { name: "RAG", icon: '<FaBrain />' },
+      { name: "Openai SDK", icon:' <SiOpenai />' },
+    ],
+  }
 ];
 
 export default function Skills() {
@@ -58,11 +83,13 @@ export default function Skills() {
                 {category.icon}
               </div>
               <h3 className="text-xl font-black uppercase mb-6 tracking-wider">{category.title}</h3>
-              <ul className="space-y-3">
+              <ul className="space-y-4">
                 {category.skills.map((skill) => (
-                  <li key={skill} className="flex items-center gap-3 text-gray-400 text-sm font-bold uppercase tracking-widest">
-                    <div className="w-1.5 h-1.5 bg-[#FF5722]" />
-                    {skill}
+                  <li key={skill.name} className="flex items-center gap-3 text-gray-400 text-sm font-bold uppercase tracking-widest group/skill transition-colors hover:text-white">
+                    <span className="text-[#FF5722] text-lg transition-transform group-hover/skill:scale-125">
+                      {skill.icon}
+                    </span>
+                    {skill.name}
                   </li>
                 ))}
               </ul>

@@ -3,12 +3,31 @@
 import { motion } from "framer-motion";
 import { ExternalLink } from "lucide-react";
 import { FaGithub } from "react-icons/fa6";
+// import { 
+//   SiReact, SiNextdotjs, SiTypescript, SiTailwindcss, 
+//   SiNodedotjs, SiMongodb, SiPostgresql, SiOpenai, SiStripe,
+//   SiRecharts
+// } from "react-icons/si";
 import Link from "next/link";
+
+// const techIcons: Record<string, JSX.Element> = {
+//   "React": <SiReact />,
+//   "Next.js": <SiNextdotjs />,
+//   "TypeScript": <SiTypescript />,
+//   "Tailwind CSS": <SiTailwindcss />,
+//   "Node.js": <SiNodedotjs />,
+//   "MongoDB": <SiMongodb />,
+//   "PostgreSQL": <SiPostgresql />,
+//   "OpenAI": <SiOpenai />,
+//   "Stripe": <SiStripe />,
+//   "Recharts": <SiRecharts />,
+// };
 
 const featuredProjects = [
   {
     title: "AI Task Manager",
     tag: "AI Tool",
+    tech: ["Next.js", "OpenAI", "PostgreSQL", "Tailwind CSS"],
     description: "A smart task management application featuring AI-driven priority sorting and natural language processing to streamline your workflow and boost productivity.",
     image: "https://images.unsplash.com/photo-1611224923853-80b023f02d71?w=800&q=80",
     github: "https://github.com",
@@ -17,6 +36,7 @@ const featuredProjects = [
   {
     title: "Eco-Commerce",
     tag: "Web App",
+    tech: ["React", "Node.js", "MongoDB", "Stripe"],
     description: "A full-stack e-commerce solution focused on sustainable products, featuring complex filtering, real-time inventory management, and secure Stripe integration.",
     image: "https://images.unsplash.com/photo-1557821552-17105176677c?w=800&q=80",
     github: "https://github.com",
@@ -25,6 +45,7 @@ const featuredProjects = [
   {
     title: "Crypto Tracker",
     tag: "Web App",
+    tech: ["TypeScript", "Next.js", "Recharts"],
     description: "A real-time cryptocurrency dashboard tracking live prices and market trends using WebSockets and the Coingecko API for precise financial data.",
     image: "https://images.unsplash.com/photo-1621761191319-c6fb62004040?w=800&q=80",
     github: "https://github.com",
@@ -65,7 +86,6 @@ export default function FeaturedProjects() {
             >
               {/* Left: Project Preview Image */}
               <div className="w-full lg:w-3/5 relative group">
-                {/* Decorative Background Element */}
                 <div className="absolute -inset-4 border border-white/5 -z-10 group-hover:border-[#FF5722]/20 transition-colors duration-500" />
                 
                 <div className="relative overflow-hidden grayscale group-hover:grayscale-0 transition-all duration-700">
@@ -74,11 +94,9 @@ export default function FeaturedProjects() {
                     alt={project.title}
                     className="w-full aspect-video object-cover transition-transform duration-700 group-hover:scale-110"
                   />
-                  {/* Subtle Orange Gradient Overlay */}
                   <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                 </div>
 
-                {/* Number Indicator */}
                 <span className="absolute -top-10 -left-4 text-8xl font-black text-white/5 select-none pointer-events-none">
                   0{index + 1}
                 </span>
@@ -94,9 +112,18 @@ export default function FeaturedProjects() {
                   {project.title}
                 </h3>
                 
-                <p className="text-gray-400 text-lg mb-10 leading-relaxed font-medium">
+                <p className="text-gray-400 text-lg mb-8 leading-relaxed font-medium">
                   {project.description}
                 </p>
+
+                {/* Tech Stack Icons */}
+                <div className="flex flex-wrap gap-4 mb-10">
+                  {project.tech.map((t) => (
+                    <div key={t} className="flex items-center gap-2 text-[#FF5722] text-xl" title={t}>
+                      {/* {techIcons[t]} */}
+                    </div>
+                  ))}
+                </div>
 
                 <div className="flex flex-wrap items-center gap-8">
                   <Link

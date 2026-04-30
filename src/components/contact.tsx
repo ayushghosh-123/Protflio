@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { FaGithub, FaLinkedin, FaInstagram, FaXTwitter } from "react-icons/fa6";
+import { FaGithub, FaLinkedin, FaInstagram, FaXTwitter ,  } from "react-icons/fa6";
 import { ArrowUpRight } from "lucide-react";
 
 export default function Contact() {
@@ -43,13 +43,6 @@ export default function Contact() {
               </p>
 
               <div className="space-y-12">
-                <div className="group cursor-pointer">
-                  <span className="text-[10px] uppercase tracking-[0.3em] text-gray-500 font-black mb-2 block">Main Email</span>
-                  <a href="mailto:hello@alexdev.com" className="text-2xl md:text-4xl font-black hover:text-[#FF5722] transition-all flex items-center gap-4">
-                    HELLO@ALEXDEV.COM
-                    <ArrowUpRight className="text-[#FF5722] opacity-0 group-hover:opacity-100 transition-opacity" size={32} />
-                  </a>
-                </div>
 
                 <div className="flex gap-4 flex-wrap">
                   {socials.map((social, i) => (

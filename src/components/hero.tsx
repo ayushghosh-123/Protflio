@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 export default function Hero() {
   return (
@@ -21,14 +22,6 @@ export default function Hero() {
         </h2>
       </div>
 
-      {/* Orange Geometric Shape */}
-      <motion.div 
-        initial={{ scale: 0, rotate: -45 }}
-        animate={{ scale: 1, rotate: 12 }}
-        transition={{ duration: 1, ease: "easeOut" }}
-        className="absolute w-[400px] h-[400px] md:w-[600px] md:h-[600px] bg-[#FF5722] -z-0 opacity-80"
-        style={{ clipPath: 'polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%)' }}
-      />
 
       <div className="relative z-10 w-full max-w-7xl mx-auto px-6 lg:px-12 flex flex-col items-center">
         {/* Main Headline */}
@@ -55,22 +48,22 @@ export default function Hero() {
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 0.2 }}
-          className="relative w-full max-w-lg md:max-w-2xl aspect-[4/5] md:aspect-square flex items-end justify-center"
+          className="relative w-full max-w-sm md:max-w-lg aspect-square flex items-end justify-center"
         >
-          {/* Replace src with your grayscale portrait image */}
-          <div className="w-full h-full grayscale contrast-125 brightness-90 relative">
-             <img 
-               src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=1974&auto=format&fit=crop" 
+          {/* Portrait image */}
+          <div className="w-full h-full relative rounded-full overflow-hidden shadow-2xl">
+             <Image 
+               src="/Images/hero_image.jpeg" 
                alt="Confident UI/UX Designer"
-               className="w-full h-full object-cover object-top filter grayscale"
+               fill
+               priority
+               className="object-cover object-top"
              />
-             {/* Gradient overlay to blend bottom */}
-             <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent h-1/3 bottom-0" />
           </div>
         </motion.div>
 
         {/* Floating Tag */}
-        <motion.div
+        {/* <motion.div
           initial={{ x: 100, opacity: 0 }}
           animate={{ x: 0, opacity: 1 }}
           transition={{ duration: 0.8, delay: 1 }}
@@ -78,7 +71,7 @@ export default function Hero() {
         >
           <span className="text-xs font-black uppercase tracking-widest">Experience</span>
           <span className="text-3xl font-black">5+ YEARS</span>
-        </motion.div>
+        </motion.div> */}
       </div>
 
       {/* Scroll Indicator */}
