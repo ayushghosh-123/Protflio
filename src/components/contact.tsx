@@ -22,7 +22,7 @@ export default function Contact() {
 
       <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-12">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-24">
-          
+
           {/* Left: Content */}
           <div>
             <motion.div
@@ -37,9 +37,9 @@ export default function Contact() {
                 Have a <br />
                 <span className="text-transparent" style={{ WebkitTextStroke: '1px white' }}>Project?</span>
               </h2>
-              
+
               <p className="text-gray-400 text-xl mb-16 max-w-md leading-relaxed">
-                I&apos;m currently available for freelance work and full-time opportunities. 
+                I&apos;m currently available for freelance work and full-time opportunities.
                 Let&apos;s build something extraordinary together.
               </p>
 
@@ -47,9 +47,9 @@ export default function Contact() {
 
                 <div className="flex gap-4 flex-wrap">
                   {socials.map((social, i) => (
-                    <a 
-                      key={i} 
-                      href={social.href} 
+                    <a
+                      key={i}
+                      href={social.href}
                       className="px-6 py-3 border border-white/10 hover:border-[#FF5722] hover:text-[#FF5722] transition-all flex items-center gap-3 text-xs font-black uppercase tracking-widest"
                     >
                       {social.icon}
@@ -74,32 +74,38 @@ export default function Contact() {
               <form className="space-y-10" onSubmit={(e) => e.preventDefault()}>
                 <div className="space-y-2 group">
                   <label className="text-[10px] uppercase tracking-widest font-black text-gray-500 group-focus-within:text-[#FF5722] transition-colors">Your Name</label>
-                  <input 
-                    type="text" 
+                  <input
+                    type="text"
                     placeholder="John Doe"
-                    className="w-full bg-transparent border-b border-white/10 py-4 focus:outline-none focus:border-[#FF5722] transition-colors placeholder:text-gray-800 text-xl font-bold uppercase" 
+                    className="w-full bg-transparent border-b border-white/10 py-4 focus:outline-none focus:border-[#FF5722] transition-colors placeholder:text-gray-800 text-xl font-bold uppercase"
                   />
                 </div>
                 <div className="space-y-2 group">
                   <label className="text-[10px] uppercase tracking-widest font-black text-gray-500 group-focus-within:text-[#FF5722] transition-colors">Your Email</label>
-                  <input 
-                    type="email" 
+                  <input
+                    type="email"
                     placeholder="john@example.com"
-                    className="w-full bg-transparent border-b border-white/10 py-4 focus:outline-none focus:border-[#FF5722] transition-colors placeholder:text-gray-800 text-xl font-bold uppercase" 
+                    className="w-full bg-transparent border-b border-white/10 py-4 focus:outline-none focus:border-[#FF5722] transition-colors placeholder:text-gray-800 text-xl font-bold uppercase"
                   />
                 </div>
                 <div className="space-y-2 group">
                   <label className="text-[10px] uppercase tracking-widest font-black text-gray-500 group-focus-within:text-[#FF5722] transition-colors">Message</label>
-                  <textarea 
-                    rows={4} 
+                  <textarea
+                    rows={4}
                     placeholder="Hello, I'd like to talk about..."
-                    className="w-full bg-transparent border-b border-white/10 py-4 focus:outline-none focus:border-[#FF5722] transition-colors placeholder:text-gray-800 text-xl font-bold uppercase resize-none" 
+                    className="w-full bg-transparent border-b border-white/10 py-4 focus:outline-none focus:border-[#FF5722] transition-colors placeholder:text-gray-800 text-xl font-bold uppercase resize-none"
                   />
                 </div>
-                <button className="w-full py-6 bg-[#FF5722] text-white font-black uppercase tracking-[0.3em] text-xs hover:bg-white hover:text-black transition-all duration-500 flex items-center justify-center gap-3">
+                <a
+                  href="https://wa.me/919064941837" // Replace with your WhatsApp number
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-full py-6 bg-[#FF5722] text-white font-black uppercase tracking-[0.3em] text-xs hover:bg-white hover:text-black transition-all duration-500 flex items-center justify-center gap-3"
+                >
                   Send Message
                   <ArrowUpRight size={18} />
-                </button>
+                </a>
+
               </form>
             </div>
           </motion.div>
